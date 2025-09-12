@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morilec</title>
+    <link rel="stylesheet" href="mafija.css">
+</head>
+
+<body>
+    <h1>Morilec</h1>
+
+    <!-- Screen 1 -->
+    <div id="page1" style="display:none;">
+        <div class="job">
+            <h2>Vloge</h2>
+            <button id="new_job_button">Dodaj vlogo</button>
+            <label id="how-many-players">Igralci: 3</label>
+        </div>
+
+        <div id="job-list"></div>
+        <label id="label"></label>
+
+        <div class="bottom-bg">
+            <div class="nav_buttons">
+                <button class="next_button">Naprej</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Screen 2 -->
+    <div id="page2" style="display:none;">
+        <div class="player_job">
+            <div id="player-labels_game"></div>
+            
+            <div class="bottom-bg">
+                <div class="nav_buttons">
+                    <button class="previous_button">Nazaj</button>
+                </div>
+            </div>
+        </div>
+        <!-- Cards for reveal the jobs -->
+        <div class="cards-container"></div>
+        <div class="job_btn"></div>
+    </div>
+
+    <!-- New End Screen -->
+    <div id="endScreen" style="display:none;">
+        <div class="doneMsg">Vse vloge so razkrite!</div>
+        <button id="new-game-btn" class="new-game-btn">Nova igra</button>
+        <button id="add-player-btn" class="add-player-btn">Dodaj vloge</button>
+    </div>
+
+    <script src="mafija.js"></script>
+</body>
+</html>
