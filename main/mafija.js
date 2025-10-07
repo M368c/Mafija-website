@@ -164,11 +164,11 @@ function showNextPlayer() {
     };
 
     document.getElementById("add-player-btn").onclick = () => {
-            currentIndex = jobs.length;
-            current = 0;
-            pages.forEach(page => page.style.display = 'none');
-            document.getElementById("page1").style.display = 'block';
-            document.getElementById("endScreen").style.display = 'none';
+        currentIndex = jobs.length;
+        current = 0;
+        pages.forEach(page => page.style.display = 'none');
+        document.getElementById("page1").style.display = 'block';
+        document.getElementById("endScreen").style.display = 'none';
         };
     return;
 }
@@ -180,6 +180,15 @@ function showNextPlayer() {
     card.addEventListener('click', () => {
         if (!card.classList.contains('flipped')) {
             card.classList.add('flipped');
+            // ok button when cards are hidden
+            const okBtn = document.createElement('button');
+            okBtn.className = "ok_button";
+            okBtn.textContent = "OK";
+            okBtn.onclick = () => {
+                currentIndex++;
+                showNextPlayer();
+            }
+            job_btn.appendChild(okBtn);
        
      };
         
@@ -201,21 +210,11 @@ function showNextPlayer() {
     card.appendChild(inner);
 
     cards_container.appendChild(card);
-    // ok button when cards are hidden
-    const okBtn = document.createElement('button');
-    okBtn.className = "ok_button";
-    okBtn.textContent = "OK";
-    okBtn.onclick = () => {
-         currentIndex++;
-         showNextPlayer();
-           
-    }
-    job_btn.appendChild(okBtn);
    
-
     setTimeout(centerCards, 0);
 }
 
+// function for shuffle
 function shuffleJobs() {
     let shuffled = [...jobData];
     for (let i = shuffled.length - 1; i > 0; i--) {

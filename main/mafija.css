@@ -38,13 +38,13 @@ body {
     font-family: "MyFont", sans-serif;
     /*background-color: rgb(70, 65, 103);*/
     /*background: linear-gradient(135deg, #3b3d59, #4a6189);*/
-    background-color: #43466d;
+    background-color: #bcbcbc;
     min-height: 100vh;
     margin: 0;
 }
 
 h1 {
-    color: #fff;
+    color: #4951e7;
     font-size: 50px;
     margin: 0;
     text-align: center;
@@ -54,26 +54,30 @@ h1 {
 .job {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* spread out items */
-    margin: 0; /* optional padding for left/right spacing */
+    justify-content: center; /* spread out items */
+    margin-bottom: 20px;
+    margin-top: 15px;;
 }
 
 h2 {
     text-align: center;
     margin-left: 25px;
     font-size: 30px;
-    color: #fff;
+    color: #000000;
 }
 
+/* FAB button */
 #new_job_button {
-    margin-left: 30px;
-    margin-top: 2px;
-    width: 100px;
-    height: 30px;
-    font-size: 13px;
+    position: fixed;
+    right: 30px;
+    bottom: 110px;
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
     background-color: rgb(163, 163, 162);
+    color: rgb(0, 0, 0);
     border: none;
-    border-radius: 5px;
+    border-radius: 100%;
     transition: transform 0.2s ease;
 }
 
@@ -87,8 +91,7 @@ h2 {
 
 #how-many-players {
     font-size: 30px;
-    margin-left: 30px;
-    margin-right: 20px; /* push it to the right */
+
 }
 
 #job-list {
@@ -100,12 +103,12 @@ h2 {
 .job-entry {
     display: flex;
     align-items: center;
-    padding: 8px;
+    padding: 6px;
     gap: 5px;
-    background-color: #3f67de80;
+    background-color: #7c7c7ea9;
     border-radius: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -119,7 +122,7 @@ h2 {
     margin-right: 3px;
     border: 1px solid #929191;
     border-radius: 10px;
-    background-color: #a4b5ca;
+    background-color: #a2b3c8;
     outline: none;
     text-align: center;
 }
@@ -140,12 +143,14 @@ h2 {
     height: 30px;
     margin-left: 3px;
     margin-right: 3px;
+    margin-bottom: 10px;
     padding: 0;
-    font-size: 15px;
+    font-size: 30px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    background: #eeeeeea9;
+    color: rgb(42, 42, 42);
+    background: none;
     transition: transform 0.2s ease, background 0.2s ease;
 }
 
@@ -239,16 +244,21 @@ h2 {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    box-sizing: border-box;
-    overflow: hidden;
-    padding: 0 20px;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-#endScreen .doneMsg {
+.doneMsg {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-    margin: 0 0 50px 0;
+    margin: 0 0 30px 0;
+}
+
+.doneMsg {
+    color: black;
 }
 
 
@@ -263,6 +273,7 @@ h2 {
     border: none;
     border-radius: 8px;
     background-color: #6fade3;
+    color: #000;
 }
 
 /* Bottom line */
@@ -275,8 +286,8 @@ h2 {
     border-radius: 10px;
     width: 100%;
     max-width: 100%;
-    background: rgba(255, 255, 255, 0.313);
-    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(4, 96, 225, 0.313);
+    border: 1px solid rgba(4, 96, 225, 0.313);
 }
 
 .nav_buttons {
