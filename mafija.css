@@ -135,6 +135,7 @@ h2 {
     text-align: center;
     background-color: #fdfdfd;
     border-radius: 5px;
+    border: none;
 }
 
 .remove {
@@ -143,9 +144,9 @@ h2 {
     height: 30px;
     margin-left: 3px;
     margin-right: 3px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     padding: 0;
-    font-size: 30px;
+    font-size: 25px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
