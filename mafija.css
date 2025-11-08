@@ -6,12 +6,6 @@
 }
 
 @media (min-width: 800px) {
-    .job {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     .job-entry {
         width: 700px;
         max-width: 700px;
@@ -33,6 +27,25 @@
     }
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* stop any global scroll */
+}
+
+/* Page container can scroll internally */
+#page1, #page2, #endScreen {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto; /* allow scroll inside the page content */
+  box-sizing: border-box;
+}
+
+#page1 {
+     padding-bottom: 350px;
+}
+
 
 body {
     font-family: "MyFont", sans-serif;
@@ -49,14 +62,6 @@ h1 {
     margin: 0;
     text-align: center;
     padding-top: 20px;
-}
-
-.job {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* spread out items */
-    margin-bottom: 20px;
-    margin-top: 15px;;
 }
 
 h2 {
@@ -91,7 +96,9 @@ h2 {
 
 #how-many-players {
     font-size: 30px;
-
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
 }
 
 #job-list {
@@ -159,19 +166,16 @@ h2 {
     transform: scale(1.02);
 }
 
-
 /* Page 2 */
-/* Cards for revealing job */
-
 #page2 {
     display: flex;
-    flex-direction: column;        /* stack card + OK button vertically */
-    justify-content: center;       /* vertical center */
-    align-items: center;           /* horizontal center */
-    height: 90vh;                 /* full viewport height */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
     box-sizing: border-box;
-    overflow: hidden;              /* prevent scrolling */
-    padding: 0;                    /* no extra space */
+    overflow: hidden;
+    padding: 0;
 }
 
 /* Cards container */
@@ -235,9 +239,11 @@ h2 {
 
 .ok_button {
     margin-top: 10px;
-    font-size: 15px;
-    width: 35px;
-    height: 35px;
+    font-size: 18px;
+    width: 100px;
+    height: 40px;
+    border-width: 1.3px;
+    border-radius: 6px;
 }
 
 #endScreen {
@@ -245,7 +251,7 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     position: absolute;
     top: 0;
@@ -281,16 +287,15 @@ h2 {
 
 /* Bottom line */
 .bottom-bg {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 35px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 100%;
-    background: rgba(4, 96, 225, 0.313);
-    border: 1px solid rgba(4, 96, 225, 0.313);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 35px;
+  background: rgba(4, 96, 225, 0.313);
+  border-top: 1px solid rgba(4, 96, 225, 0.313);
+  box-sizing: border-box;
+  z-index: 10;
 }
 
 .nav_buttons {

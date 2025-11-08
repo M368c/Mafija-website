@@ -1,4 +1,5 @@
 //nav_bar 
+const label = document.getElementById('how-many-players');
 const pages = Array.from(document.querySelectorAll('div[id^="page"]'));
 let current = 0;
 
@@ -11,35 +12,23 @@ document.querySelectorAll('.next_button').forEach(btn => {
         current++;
         showPage(current);
 
-        if (current === 1) { addPlayerLabel(); }
+        if (current === 1) { addPlayerLabel(); label.style.display = "none"}
     });
 });
 
 document.querySelectorAll('.previous_button').forEach(btn => {
     btn.addEventListener('click', () => {
         if (current > 0) current--;
-        showPage(current);
-    });
-});
-
-document.querySelectorAll('.home_button').forEach(btn => {
-    btn.addEventListener('click', () => {
-        current = 0;
+        if (current === 0) { label.style.display = "block" }
         showPage(current);
     });
 });
 
 showPage(current);
 
-
-// PLAYERS
-
-
-
 // JOBS
 const addJobBtn = document.getElementById('new_job_button');
 const jobList = document.getElementById('job-list');
-const label = document.getElementById('how-many-players');
 
 spinner_sum = 0;
 let jobData = [];
@@ -139,7 +128,6 @@ function centerCards() {
     container.style.marginTop = marginTop > 0 ? marginTop + 'px' : '0px';
 }
 
-// Center initially
 centerCards();
 
 // Recalculate on window resize
@@ -158,7 +146,6 @@ function showNextPlayer() {
     document.getElementById("new-game-btn").onclick = () => {
         currentIndex = 0;
         addPlayerLabel();
-        pages.forEach(page => page.style.display = 'none');
         pages[1].style.display = 'block';
         document.getElementById("endScreen").style.display = "none"; // hide end screen
     };
@@ -166,7 +153,7 @@ function showNextPlayer() {
     document.getElementById("add-player-btn").onclick = () => {
         currentIndex = jobs.length;
         current = 0;
-        pages.forEach(page => page.style.display = 'none');
+        label.style.display = "block"
         document.getElementById("page1").style.display = 'block';
         document.getElementById("endScreen").style.display = 'none';
         };
