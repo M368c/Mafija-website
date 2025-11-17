@@ -51,17 +51,24 @@ body {
     font-family: "MyFont", sans-serif;
     /*background-color: rgb(70, 65, 103);*/
     /*background: linear-gradient(135deg, #3b3d59, #4a6189);*/
-    background-color: #bcbcbc;
+    background-color: #d6d5d5;
     min-height: 100vh;
     margin: 0;
 }
 
+.top-bar {
+    background: rgba(4, 96, 225, 0.52);
+    border-bottom: solid rgb(136, 135, 135) 2px;
+    box-shadow: 0 5px #aaaaaa60;
+}
+
 h1 {
-    color: #4951e7;
+    color: #292929;
     font-size: 50px;
     margin: 0;
     text-align: center;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 h2 {
@@ -97,8 +104,8 @@ h2 {
 #how-many-players {
     font-size: 30px;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 15px;
+    margin-top: 25px;
+    margin-bottom: 18px;
 }
 
 #job-list {
@@ -111,59 +118,69 @@ h2 {
     display: flex;
     align-items: center;
     padding: 6px;
-    gap: 5px;
-    background-color: #7c7c7ea9;
+    /*background-color: #7c7c7ea9;*/
     border-radius: 10px;
     margin-left: 30px;
     margin-right: 30px;
-    box-sizing: border-box;
     overflow: hidden;
 }
 
 .input-job { 
     flex: 1 1 auto;
-    min-width: 80px;
+    min-width: 60px;
     font-size: 16px;
-    height: 31px;
+    height: 32px;
     padding: 5px 10px;
-    margin-right: 3px;
-    border: 1px solid #929191;
-    border-radius: 10px;
-    background-color: #a2b3c8;
+    margin-right: 0px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border: solid rgb(136, 135, 135) 1.5px;
+    border-right: none;
+    background: #ffffff;
     outline: none;
     text-align: center;
+    box-shadow: 2px 3px rgb(136, 135, 135);
+    transition: background 0.2s ease;
 }
 
 .job-spinner {
-    flex-shrink: 0;
     width: 50px;
-    height: 25px;
+    height: 40px;
     font-size: 15px;
     text-align: center;
-    background-color: #fdfdfd;
-    border-radius: 5px;
-    border: none;
+    background: #ffffff;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border: solid rgb(136, 135, 135) 1.5px;
+    box-shadow: 2px 3px rgb(136, 135, 135);
+    transition: background 0.2s ease;
+}
+
+.job-spinner:hover, .input-job:hover {
+    background-color: rgb(222, 221, 221);
 }
 
 .remove {
-    flex-shrink: 0;
-    width: 30px;
-    height: 30px;
-    margin-left: 3px;
+    text-align: center;
+    min-width: 43px;
+    height: 45px;
+    margin-left: 8px;
     margin-right: 3px;
-    margin-bottom: 8px;
     padding: 0;
     font-size: 25px;
-    border: none;
-    border-radius: 8px;
+    border: solid rgb(136, 135, 135) 1.5px;
+    border-radius: 10px;
     cursor: pointer;
     color: rgb(42, 42, 42);
-    background: none;
-    transition: transform 0.2s ease, background 0.2s ease;
+    background: #ffffff;
+    box-shadow: 2px 3px rgb(136, 135, 135);
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 5s;
 }
 
 .remove:hover {
     transform: scale(1.02);
+    box-shadow: 3px 4px rgb(136, 135, 135);
+    background-color: rgb(222, 221, 221);
 }
 
 /* Page 2 */

@@ -39,7 +39,7 @@ function updateJobs() {
 
     Array.from(jobList.querySelectorAll('.job-entry')).forEach(row => {
         const name = row.querySelector('.input-job').value.trim();
-        const count = parseInt(row.querySelector('.job-spinner').value) || 1;
+        const count = parseInt(row.querySelector('.job-spinner').value) || 0;
         if (name !== '') {
             spinner_sum += count;
             for (let i = 0; i < count; i++) {
@@ -65,8 +65,7 @@ function addJob(name = '', removable = true) {
     const spinner_input = document.createElement('input');
     spinner_input.type = 'number';
     spinner_input.className = 'job-spinner';
-    spinner_input.min = 1;
-    spinner_input.max = 5;
+    spinner_input.min = 0;
     spinner_input.value = 1;
     spinner_input.addEventListener('input', updateJobs);
     row.appendChild(spinner_input);
