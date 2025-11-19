@@ -153,6 +153,7 @@ h2 {
     border-top-right-radius: 10px;
     border: solid rgb(136, 135, 135) 1.5px;
     box-shadow: 2px 3px rgb(136, 135, 135);
+    outline: none;
     transition: background 0.2s ease;
 }
 
